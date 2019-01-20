@@ -23,5 +23,16 @@ struct Instruction {
 int convertChartoInt(char tab[], int flag);
 void creerInstruction (Instruction *I, char S[]);
 
+//MODIFICATION 20/01 Etienne
+//	Ajout prototype fonction
+
+/*
+
+void ADDI (Instruction instruction);
+void ADD (Instruction instruction);
+void SW (Instruction instruction);
+void LW (Instruction instruction);
+void OR (Instruction instruction);
+
 
 #endif
