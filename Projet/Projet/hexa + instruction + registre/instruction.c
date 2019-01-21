@@ -63,7 +63,7 @@ void MULT (Instruction instruction) {
 }
 
 void SUB (Instruction instruction) {
-    ecritureRegistre(instruction.p3, lireRegistre(instruction.p1) - lireRegistre(instruction.p2)))
+    ecritureRegistre(instruction.p3, lireRegistre(instruction.p1) - lireRegistre(instruction.p2)));
 }
 
 void DIV (Instruction instruction) {
