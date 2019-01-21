@@ -63,7 +63,7 @@ void MULT (Instruction instruction) {
 }
 
 void SUB (Instruction instruction) {
-    ecritureRegistre(instruction.p3, lireRegistre(instruction.p1) - lireRegistre(instruction.p2)))
+    ecritureRegistre(instruction.p3, lireRegistre(instruction.p1) - lireRegistre(instruction.p2));
 }
 
 void DIV (Instruction instruction) {
@@ -93,24 +93,24 @@ void XOR (Instruction instruction) {
 
 void BEQ (Instruction instruction) {
     if(lectureRegistre(instruction.p1) == lectureRegistre(instruction.p2)){
-        pc += instruction.p3;
+        PC += instruction.p3;
     }
 }
 
 void BGTZ (Instruction instruction) {
-    if(lectureRegistre(instruction.p1) > 0{
-        pc += instruction.p2;
+    if(lectureRegistre(instruction.p1) > 0) {
+        PC += instruction.p2;
     }
 }
 
 void BLEZ (Instruction instruction) {
-    if(lectureRegistre(instruction.p1) <= 0{
-        pc += instruction.p2;
+    if(lectureRegistre(instruction.p1) <= 0) {
+        PC += instruction.p2;
     }
 }
 
 void BNE (Instruction instruction) {
     if(lectureRegistre(instruction.p1) != lectureRegistre(instruction.p2)){
-        pc += instruction.p3;
+        PC += instruction.p3;
     }
 }
