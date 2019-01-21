@@ -9,7 +9,7 @@
 
 #define  fp1 flag[0]
 #define  fp2 flag[1]
-#define fp3 flag[2] 
+#define fp3 flag[2]
 #define MAX 100
 
 
@@ -22,17 +22,29 @@ struct Instruction {
 
 int convertChartoInt(char tab[], int flag);
 void creerInstruction (Instruction *I, char S[]);
+void ADDI (Instruction instruction);
 
-//MODIFICATION 20/01 Etienne
-//	Ajout prototype fonction
-
-/*
+//Modification Etienne
 
 void ADDI (Instruction instruction);
 void ADD (Instruction instruction);
-void SW (Instruction instruction);
-void LW (Instruction instruction);
 void OR (Instruction instruction);
+void AND (Instruction instruction);
+void LW (Instruction instruction);
+void SW (Instruction instruction);
+void MFLO (Instruction instruction);
+void MFHI (Instruction instruction);
+void MULT (Instruction instruction);
+void SUB (Instruction instruction);
+void DIV (Instruction instruction);
+void SLL (Instruction instruction);
+void SRL (Instruction instruction);
+void SLT (Instruction instruction);
+void XOR (Instruction instruction);
+void BEQ (Instruction instruction);
+void BGTZ (Instruction instruction);
+void BLEZ (Instruction instruction);
+void BNE (Instruction instruction);
 
 
 #endif
