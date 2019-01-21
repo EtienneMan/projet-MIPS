@@ -9,7 +9,7 @@
 
 #define  fp1 flag[0]
 #define  fp2 flag[1]
-#define fp3 flag[2] 
+#define fp3 flag[2]
 #define MAX 100
 
 
@@ -24,5 +24,15 @@ int convertChartoInt(char tab[], int flag);
 void creerInstruction (Instruction *I, char S[]);
 void ADDI (Instruction instruction);
 
+//Modification Etienne
 
+void ADDI (Instruction instruction);
+void ADD (Instruction instruction);
+void OR (Instruction instruction);
+void AND (Instruction instruction);
+void LW (Instruction instruction);
+void SW (Instruction instruction);
+void MFLO (Instruction instruction);
+void MFHI (Instruction instruction);
+void MULT (Instruction instruction);
 #endif
