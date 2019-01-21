@@ -30,15 +30,15 @@ void ADDI (Instruction instruction) {
 //Modification Etienne
 
 void ADD (Instruction instruction) {
-	ecritureRegistre(instruction.p2, lectureRegistre(instruction.p1) + lectureRegistre(instruction.p3));
+	ecritureRegistre(instruction.p3, lectureRegistre(instruction.p1) + lectureRegistre(instruction.p2));
 }
 
 void AND (Instruction instruction) {
-	ecritureRegistre(instruction.p2, lectureRegistre(instruction.p1) & lectureRegistre(instruction.p3));
+	ecritureRegistre(instruction.p3, lectureRegistre(instruction.p1) & lectureRegistre(instruction.p2));
 }
 
 void OR (Instruction instruction) {
-	ecritureRegistre(instruction.p2, lectureRegistre(instruction.p1) | lectureRegistre(instruction.p3));
+	ecritureRegistre(instruction.p3, lectureRegistre(instruction.p1) | lectureRegistre(instruction.p2));
 }
 
 void LW (Instruction instruction) {
@@ -58,5 +58,36 @@ void MFLO (Instruction instruction) {
 }
 
 void MULT (Instruction instruction) {
-    LO= (lectureRegistre(instruction.p1) * lectureRegistre(instruction.p2))
+    LO=(lectureRegistre(instruction.p1) * lectureRegistre(instruction.p2)) >> 32;
+    HI=(lectureRegistre(instruction.p1) * lectureRegistre(instruction.p2)) << 32;
 }
+
+void SUB (Instruction instruction) {
+    ecritureRegistre(instruction.p3, lireRegistre(instruction.p1) - lireRegistre(instruction.p2)))
+}
+
+void DIV (Instruction instruction) {
+    LO = lectureRegistre(instruction.p1) / lectureRegistre(instruction.p2);
+    HI = lectureRegistre(instruction.p1) % lectureRegistre(instruction.p2);
+}
+
+void SLL (Instruction instruction) {
+    ecritureRegistre(instruction.p2, lectureRegistre(instruction.p1) << instruction.p3);
+}
+
+void SRL (Instruction instruction) {
+    ecritureRegistre(instruction.p2, lectureRegistre(instruction.p1) >> instruction.p3);
+}
+
+void SLT (Instruction instruction) {
+    if(lectureRegistre(instruction.p1) < lectureRegistre(instruction.p2)) {
+        ecritureRegistre(instruction.p3, 1);
+    }else {
+        ecritureRegistre(instruction.p3, 0);
+    }
+}
+
+void XOR (Instruction instruction) {
+    ecritureRegistre(instruction.p3, lectureRegistre(instruction.p1) ^ lectureRegistre(instruction.p2));
+}
+

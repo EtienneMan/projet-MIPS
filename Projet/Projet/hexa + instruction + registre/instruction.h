@@ -35,4 +35,11 @@ void SW (Instruction instruction);
 void MFLO (Instruction instruction);
 void MFHI (Instruction instruction);
 void MULT (Instruction instruction);
+void SUB (Instruction instruction);
+void DIV (Instruction instruction);
+void SLL (Instruction instruction);
+void SRL (Instruction instruction);
+void SLT (Instruction instruction);
+void XOR (Instruction instruction);
+
 #endif
